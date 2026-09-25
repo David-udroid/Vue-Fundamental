@@ -20,12 +20,12 @@ this automatically creates the project folder, install dependencies and run the 
  ![Screenshot](./screenshot/vue-install.png)
 
 ## Creation of Profile Card
-Unveiling the base of every .vue file:
+<!-- Unveiling the base of every .vue file:
 ```sh
 # <template></template> → what appears on the page
 # <script> → the logic/data
 # <style> → how it looks
-```g
+``` -->
 
 - Name: created in srcipt section with "const name ='David Chinemelum' "
 - Photo: imported from "src/assets/" 
