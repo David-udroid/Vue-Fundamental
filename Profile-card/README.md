@@ -42,3 +42,16 @@ The logic/functional of the profile card.
 
 ## GitHub Pushing.
 1. Git initialization:
+  git init
+2. Commiting, Staging and Pushing:
+```sh
+  git add .
+  git commit -m "Initial commit"
+  git branch -M main
+  git remote add origin https://github.com/David-udroid/Vue-fundamental.git
+  git push -u origin main
+```
+## Final Result
+- Day 1 final deliverable is:
+
+A polished, responsive personal developer profile card built with Vue 3 + Vite and hosted in your GitHub repository.
