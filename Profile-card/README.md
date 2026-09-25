@@ -21,10 +21,11 @@ this automatically creates the project folder, install dependencies and run the 
 
 ## Creation of Profile Card
 Unveiling the base of every .vue file:
-
-<template> → what appears on the page
-<script> → the logic/data
-<style> → how it looks
+```sh
+# <template></template> → what appears on the page
+# <script> → the logic/data
+# <style> → how it looks
+```g
 
 - Name: created in srcipt section with "const name ='David Chinemelum' "
 - Photo: imported from "src/assets/" 
@@ -55,3 +56,5 @@ The logic/functional of the profile card.
 - Day 1 final deliverable is:
 
 A polished, responsive personal developer profile card built with Vue 3 + Vite and hosted in your GitHub repository.
+
+![Screenshot](./screenshot/final.png)
