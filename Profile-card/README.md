@@ -1,0 +1,44 @@
+# Day 1  — Setup & First Component. ✅
+
+- Topic
+ Node/Vite setup, project structure.
+
+
+- Milestone
+  Scaffold a Vite + Vue 3 app and render a personal profile card (name, photo, bio).
+
+## Project Setup.
+1. Created a new project folder - Vue-Fundamental.
+
+```sh
+# Vue Installation.
+ npm create vite@latest Profile-card -- --template vue
+```
+this automatically creates the project folder, install dependencies and run the dev.
+
+### Terminal Output
+ ![Screenshot](./screenshot/vue-install.png)
+
+## Creation of Profile Card
+Unveiling the base of every .vue file:
+
+<template> → what appears on the page
+<script> → the logic/data
+<style> → how it looks
+
+- Name: created in srcipt section with "const name ='David Chinemelum' "
+- Photo: imported from "src/assets/" 
+- Bio: description of my tech background.
+
+## Styling
+This contains the overall look of the Profile card.
+
+## Script
+The logic/functional of the profile card.
+
+### Terminal Output
+ ![Screenshot](./screenshot/app.png)
+ ![Screenshot](./screenshot/app-2.png)
+
+## GitHub Pushing.
+1. Git initialization:
