@@ -164,7 +164,7 @@ The counter increases whenever the button is clicked.
 ```js
  import { reactive } from 'vue'
 ```
-[Day 3](./screenshot/reactivity.png)
+![Reactive](./screenshot/reactivity.png)
 
 ### 3. Added a Live-Editable Bio. 
 - Bounded a textarea to `user.bio` with `v-model` so the bio updates as I type.
@@ -186,7 +186,7 @@ The counter increases whenever the button is clicked.
 </button>
 ```
 *Result*👩🏾‍💻.
-[Day 3](./screenshot/day3.png)
+![Day 3](./screenshot/day3.png)
 
 ### 5. Screen Recording:
 A video recording showing all day-3 reactivity features.
