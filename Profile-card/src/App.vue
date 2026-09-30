@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import image from './assets/My-image.png'
 
 const user = reactive({
@@ -11,17 +11,33 @@ const user = reactive({
  isOnline: true,
 })
 
+const clickCount = ref(0)
+function increment(){ clickCount.value++ }
+
 </script>
 
 <template>
   <div class="card">
-      <img :src="user.image" alt="Profile Pic">
-      <h1>{{ user.name }}</h1>
-      <h3 class="role" :style="{ color: user.themeColor }">{{ user.role }}</h3>
-      <p>{{ user.bio }}</p>
-      <span class="status" :class="{ online: user.isOnline, offline: !user.isOnline }">
-        {{ user.isOnline ? 'Online' : 'Offline' }}
-      </span>
+    <img :src="user.image" alt="Profile Pic">
+    <h1>{{ user.name }}</h1>
+    <h3 class="role" :style="{ color: user.themeColor }">{{ user.role }}</h3>
+    <p>{{ user.bio }}</p>
+    <textarea
+      v-model="user.bio"
+      class="bio-build"
+      rows="7"
+      placeholder="Write your story...">
+    </textarea>
+    <div>
+      <button @click="increment">
+        Click! {{ clickCount }} 
+      </button>
+    </div>
+    
+
+    <span class="status" :class="{ online: user.isOnline, offline: !user.isOnline }">
+      {{ user.isOnline ? 'Online' : 'Offline' }}
+    </span>
   </div>
 </template>
 
@@ -36,7 +52,7 @@ const user = reactive({
   text-align: center;
   border-radius: 15px;
   background: black;
-  box-shadow: 0 5px 20px rbga(0, 0, 0, 0.15);
+  box-shadow: 0 5px 20px #2e311bb0
  }
 
  .card img{
@@ -72,5 +88,37 @@ const user = reactive({
 .status.offline { 
   color: #b38989;
   background: #261e21; 
-  }
+}
+
+textarea { 
+  width: 100%;
+  min-height: 80px; 
+  margin-top: 0.4rem; 
+  resize: none;
+  border-radius: 8px;
+  color:#cbbbb6;
+  font-size: 16px;
+  background: #363535;
+  border: 1px solid #f1c518;
+  box-sizing: border-box; 
+}
+
+button { 
+  border: none; 
+  background-color: rgb(51, 50, 50);
+  color: #fff; 
+  padding: 0.5rem 1rem; 
+  border-radius: 8px; 
+  cursor: pointer;
+  overflow: hidden;
+}
+button:active{
+  background-color: #261e21;
+  color: aliceblue;
+  box-shadow: 1px solid gainsboro;
+}
+.counter{
+  margin-top: 20px;
+}
+
 </style>
