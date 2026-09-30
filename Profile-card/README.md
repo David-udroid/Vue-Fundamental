@@ -59,7 +59,7 @@ A polished, responsive personal developer profile card built with Vue 3 + Vite a
 
 ![Screenshot](./screenshot/final.png)
 
-### What I learned
+### What I learned😀:
  - learnt how to setup and bulid a profile card.
 
 # Day 2 — Template Syntax & Interpolation.✅
@@ -129,10 +129,78 @@ A screenshot of the completed ynamic profile card
 Offline -  `isOnline: false`
 ![Day 2](./screenshot/offline.png)
 
-## What I learned
+## What I learned😀:
 
 - **Interpolation (`{{ }}`)** renders text from data. It accepts expressions only (no `if` statements), so I used a ternary for conditional text.
 - **`v-bind` (shorthand `:`)** connects an HTML attribute to a JS expression. Attribute binding is its most common use, e.g. `:src` and `:href`.
 - **Class binding** uses the object syntax to toggle classes based on data, e.g. `:class="{ online: user.isOnline }"`.
 - **Style binding** takes an object with camelCase properties, e.g. `:style="{ borderColor: user.themeColor }"`.
 
+
+# Day 3: Reactivity Basics.✅
+
+### Topic:
+`ref()`, `reactive()`, the reactivity system
+
+### Milestone:
+Added a click counter and a live-editable bio field to the profile card
+
+## Project Overview
+For Day 3, I updated my Vue.js profile card by introducing Vue's reactivity system. I added a click counter and a live-editable bio field so that the profile card responds immediately to user interactions.
+
+## Step Completed☑️:
+### 1. **`Ref ()`** function.
+ This wraps single values; access with `.value` in script, auto-unwrapped in the template.
+```js
+ import { ref } from 'vue'
+const count = ref(0)
+function increment(){ clickCount.value++ }
+```
+The counter increases whenever the button is clicked.
+
+### 2. **`Reactive()`** Function.
+ - This Keeps `user` as a `reactive` object.
+ - It makes objects deeply reactive; access properties directly.
+```js
+ import { reactive } from 'vue'
+```
+[Day 3](./screenshot/reactivity.png)
+
+### 3. Added a Live-Editable Bio. 
+- Bounded a textarea to `user.bio` with `v-model` so the bio updates as I type.
+- used `v-model` to connect a textarea to the reactive `profile.bio` property.
+```html
+<textarea
+  v-model="user.bio"
+  class="bio-build"
+  rows="7"
+  placeholder="Write your story...">
+</textarea>
+```
+### 4. Click Counter.
+-Added a button using `@click` to update the counter.
+- A button that changes the counter every time it is clicked.
+```html
+<button @click="increment">
+  Click! {{ clickCount }} 
+</button>
+```
+*Result*👩🏾‍💻.
+[Day 3](./screenshot/day3.png)
+
+### 5. Screen Recording:
+A video recording showing all day-3 reactivity features.
+
+[Watch the screen recording](./src/assets/recordings.mp4)
+
+## Git Commands.
+I saved and pushed my changes to GitHub.
+
+git add .
+git commit -m " Day 3 reactivity basics "
+git push
+
+## What I Learned😀:
+ - `ref()` wraps single values; access with `.value` in script, auto-unwrapped in the template.
+ - `reactive()` makes objects deeply reactive; access properties directly.
+ - Reassigning or destructuring a `reactive` object breaks reactivity.
